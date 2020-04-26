@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind utilities;
+
+html {
+  scroll-padding-top: 96px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body.no-scroll {
+  height: 100%;
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+
+.mobile-nav, .nav, #content {
+  transition-property: transform;
+  transition-duration: 200ms;
+}
+
+.mobile-nav-active .nav, .mobile-nav-active #content {
+  transform: translate(-240px, 0);
+}
+
+.mobile-nav {
+  width: 240px;
+  transform: translate(240px, 0);
+}
+
+.mobile-nav-active .mobile-nav {
+  transform: translate(0, 0);
+}
+
+.outer-grid {
+  @apply px-8;
+}
+
+.text-input {
+  @apply border-2 border-black py-2 px-3 text-xl w-full;
+}
+
+.text-input.error {
+  @apply border-red-500;
+}
+
+.input-label {
+  @apply block text-lg mb-1;
+}
+
+.btn {
+  @apply px-8 py-3 bg-yellow-700 transition-colors duration-200 text-white flex items-center;
+}
+
+.btn:hover {
+  @apply bg-yellow-600;
+}
+
+.link {
+  @apply text-blue-700;
+}
+
+.link:hover {
+  @apply text-blue-600;
+}
+
+/** md: */
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 128px;
+  }
+
+  .outer-grid {
+    @apply px-16;
+  }
+
+  .btn {
+    @apply px-12 py-4 text-lg;
+  }
+
+  .input-label {
+    @apply text-xl;
+  }
+}
+
+/** xl: */
+@media (min-width: 1280px) {
+  .outer-grid {
+    @apply px-32;
+  }
+}
+
+.nav-bar-link {
+  @apply inline-flex items-center text-white  transition-colors duration-200 px-4 py-2 mx-2 text-lg;
+}
+
+.nav-bar-link:hover {
+  @apply text-yellow-500;
+}
+
+.nav-bar-link--active {
+  @apply text-yellow-600;
+}
+
+.nav-bar-logo-link {
+  transform: translate(-12px, 0);
+}
+
+.nav-bar-logo-link > svg {
+  transition-property: transform fill stroke;
+  transition-duration: 200ms;
+  @apply text-white fill-current stroke-current;
+}
+
+.nav-bar-logo-link:hover > svg {
+  @apply text-yellow-500 fill-current stroke-current;
+}
+
+.nav-bar-logo-link:hover > svg:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+
+.roulette-wheel {
+  animation: roulette-wheel 4s;
+  animation-iteration-count: infinite;
+}
+
+.roulette-ball {
+  animation: roulette-ball 4s;
+  animation-iteration-count: infinite;
+}
+
+.fat-bat {
+  animation: fat-bat 1.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+.foxxie {
+  animation: foxxie 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes foxxie {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes fat-bat {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(150px, -75px);
+  }
+}
+
+@keyframes roulette-wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1080deg);
+  }
+}
+
+@keyframes roulette-ball {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
