@@ -5,13 +5,13 @@ import { Splash, NavBar, Footer } from "../shared";
 
 const DESCRIPTIONS = {
   CHAT_APP: `
-    Next2Me is a startup idea I've been working on with a couple friends. I recently quit my job, which gave my the opportunity
-    to jump in head first and take the lead on the tech side.
+    Next2Me is a startup I founded and have working on with a couple friends. I had the idea for sometime and only recently
+    decided to "make it happen".
     <br/><br/>
-    We have two server projects, a GraphQL Rest API and a WebSocket messaging API .
+    We have two servers, a GraphQL Rest API and a WebSocket messaging API.
     Both share a custom NPM package that allows them to connect to the same MongoDB database.
-    We initially wanted to host on Heroku because of simplicity, but soon realized even their professional plans were tapping out at just a few hundred simultaneous WebSocket connnections.
-    That lead us to AWS, where I took on the task of deploying everything to EC2 instances.
+    Initially we went with Heroku for hosting because of simplicity, but soon realized even their professional plans were tapping out at just a few hundred simultaneous WebSocket connnections.
+    That lead us to AWS and deployment of EC2 instances.
     Once successfully deployed, we were able to make improvements such as: disabling Node garbage collection and running it at our determined intervals and
     selecting hardware specialized for network connections for our messaging server. After that, we were able to hit 2000+ simultaneous connections pretty comfortably while paying the same price we were on Heroku
     (check out this <a class="link" href="https://blog.jayway.com/2015/04/13/600k-concurrent-websocket-connections-on-aws-using-node-js/">article</a> to see most of what we did).
@@ -20,7 +20,6 @@ const DESCRIPTIONS = {
     We've taken on the approach of using <a class="link" href="https://reactjs.org/docs/hooks-intro.html">Hooks</a> and all functional components.
     This was an uneasy transition for those of us that had used React before, but we all soon came to love the elegance of this method.
     Another interesting approach we took was to create our own <a class="link" href="https://tailwindcss.com/">Tailwind.css</a> package for React Native.
-    This is still hotly debated on the team, but I personally love the atomic approach to CSS.
   `,
 };
 
