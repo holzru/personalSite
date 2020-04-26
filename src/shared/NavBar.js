@@ -60,7 +60,7 @@ const NavBar = ({ isDark = false }) => {
           className="flex items-center relative"
           style={{ mixBlendMode: "difference" }}
         >
-          <HashLink to="/projects#splash" className="nav-bar-logo-link">
+          <HashLink to="/projects" className="nav-bar-logo-link">
             <svg
               className="absolute top-0 left-0 w-20 h-20 md:w-28 md:h-28"
               viewBox="0 0 100 100"
@@ -119,21 +119,21 @@ const NavBar = ({ isDark = false }) => {
           </HashLink>
           <div className="hidden lg:block">
             <NavHashLink
-              to="/projects#splash"
+              to="/projects"
               activeClassName="nav-bar-link--active"
               className="nav-bar-link"
             >
               PROJECTS
             </NavHashLink>
             <NavHashLink
-              to="/about#splash"
+              to="/about"
               activeClassName="nav-bar-link--active"
               className="nav-bar-link"
             >
               ABOUT
             </NavHashLink>
             <NavHashLink
-              to="/resume#splash"
+              to="/resume"
               activeClassName="nav-bar-link--active"
               className="nav-bar-link"
             >
@@ -175,21 +175,21 @@ const NavBar = ({ isDark = false }) => {
       <nav className="fixed z-50 top-0 right-0 h-screen mobile-nav bg-gray-800">
         <div className="flex flex-col py-8 px-4">
           <NavHashLink
-            to="/projects#splash"
+            to="/projects"
             activeClassName="nav-bar-link--active"
             className="nav-bar-link mb-2"
           >
             PROJECTS
           </NavHashLink>
           <NavHashLink
-            to="/about#splash"
+            to="/about"
             activeClassName="nav-bar-link--active"
             className="nav-bar-link mb-2"
           >
             ABOUT
           </NavHashLink>
           <NavHashLink
-            to="/resume#splash"
+            to="/resume"
             activeClassName="nav-bar-link--active"
             className="nav-bar-link mb-2"
           >
