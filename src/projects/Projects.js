@@ -5,13 +5,13 @@ import { Splash, NavBar, Footer } from "../shared";
 
 const DESCRIPTIONS = {
   CHAT_APP: `
-    Next2Me is a startup I founded and have working on with a couple friends. I had the idea for sometime and only recently
+    Next2Me is a startup I founded and have been working on with a couple friends. I had the idea for sometime and only recently
     decided to "make it happen".
     <br/><br/>
     We have two servers, a GraphQL Rest API and a WebSocket messaging API.
     Both share a custom NPM package that allows them to connect to the same MongoDB database.
     Initially we went with Heroku for hosting because of simplicity, but soon realized even their professional plans were tapping out at just a few hundred simultaneous WebSocket connnections.
-    That lead us to AWS and deployment of EC2 instances.
+    That led us to AWS and deployment of EC2 instances.
     Once successfully deployed, we were able to make improvements such as: disabling Node garbage collection and running it at our determined intervals and
     selecting hardware specialized for network connections for our messaging server. After that, we were able to hit 2000+ simultaneous connections pretty comfortably while paying the same price we were on Heroku
     (check out this <a class="link" href="https://blog.jayway.com/2015/04/13/600k-concurrent-websocket-connections-on-aws-using-node-js/">article</a> to see most of what we did).

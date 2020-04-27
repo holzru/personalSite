@@ -11,7 +11,7 @@ const About = () => {
           imgUrl="/imgs/me-bg.jpg"
           imgAlt="pen and paper"
         />
-        <div className="py-16">
+        <div className="py-16 pb-0">
           <div className="outer-grid flex items-center flex-col-reverse lg:flex-row py-16">
             <div className="pt-8 lg:w-1/2 lg:pt-0 lg:pr-16">
               <h2 className="text-4xl md:text-5xl pb-4">
